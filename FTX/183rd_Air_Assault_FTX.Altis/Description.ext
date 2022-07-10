@@ -1,0 +1,29 @@
+//////////--Game Mode--//////////        -----> http://community.bistudio.com/wiki/description.ext#Header_Class
+class header {
+	gametype = COOP;
+	minplayers = 1;
+	maxplayers = 70;
+	playerCountMultipleOf = 1;
+};
+
+
+//////////--Author and Loadscreen information--//////////        -----> https://community.bistudio.com/wiki/Loading_Screens
+author = "183rd Missions Team";
+OnLoadName = "183rd Air Assault FTX";
+OnLoadMission = "183rd Air Assault FTX";
+loadScreen = "Background.paa";
+
+
+//////////--Respawn--//////////        -----> https://community.bistudio.com/wiki/Arma_3_Respawn
+respawn = BASE;
+respawnDelay = 3;
+respawnDialog = 0;	//Enables handy BIS respawn dialog to switch respawn points if multiple are defined
+disabledAI = 1;
+respawnTemplates[] = {"MenuInventory","MenuPosition"};
+respawnButton = 1;
+respawnOnStart = 0;
+
+
+#include "script_component.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"

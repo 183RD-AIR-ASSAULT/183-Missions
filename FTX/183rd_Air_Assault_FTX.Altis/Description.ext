@@ -22,8 +22,3 @@ disabledAI = 1;
 respawnTemplates[] = {"MenuInventory","MenuPosition"};
 respawnButton = 1;
 respawnOnStart = 0;
-
-
-#include "script_component.hpp"
-#include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"

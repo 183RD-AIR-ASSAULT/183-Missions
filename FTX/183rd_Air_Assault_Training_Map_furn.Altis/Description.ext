@@ -1,0 +1,33 @@
+//////////--Game Mode--//////////        -----> http://community.bistudio.com/wiki/description.ext#Header_Class
+class header {
+	gametype = COOP;
+	minplayers = 1;
+	maxplayers = 70;
+	playerCountMultipleOf = 1;
+};
+
+allowFunctionsRecompile = 0; //Turn this off when the script works before you use in in a multiplayer environment. Prevents hackers from recompiling the functions.
+//////////--Author and Loadscreen information--//////////        -----> https://community.bistudio.com/wiki/Loading_Screens
+author = "183rd Missions Team";
+OnLoadName = "183rd Air Assault Training";
+OnLoadMission = "183rd Air Assault Training";
+loadScreen = "Background.paa";
+disabledAI = 1;
+enableTargetDebug = 1;
+
+
+#include "script_component.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgSimulator.hpp"
+#include "dialogs\defines.hpp"
+#include "dialogs\patientSpawnMenu.hpp"
+
+class CfgDebriefingSections
+{
+    #include "\z\tfd\addons\adminmenu\debriefAdminLog.inc"
+    class acex_killTracker {
+        title = "ACEX Killed Events";
+        variable = "acex_killTracker_outputText";
+    };
+};

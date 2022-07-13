@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=283;
+		nextID=279;
 	};
 	class Camera
 	{
@@ -31,7 +31,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="183rd_Air_Assault_FTX";
+sourceName="183rd_Air_Assault_work";
 addons[]=
 {
 	"rhsusf_c_Caiman",
@@ -10563,7 +10563,7 @@ class Mission
 				};
 			};
 			id=1831;
-			atlOffset=82.976501;
+			atlOffset=85.029274;
 		};
 		class Item22
 		{

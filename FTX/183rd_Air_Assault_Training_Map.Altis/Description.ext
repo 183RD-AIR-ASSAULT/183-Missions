@@ -16,6 +16,15 @@ loadScreen = "Background.paa";
 disabledAI = 1;
 enableTargetDebug = 1;
 
+
+//////////--Respawn--//////////        -----> https://community.bistudio.com/wiki/Arma_3_Respawn
+respawn = BASE;
+respawnDelay = 3;
+respawnDialog = 0;	//Enables handy BIS respawn dialog to switch respawn points if multiple are defined
+respawnTemplates[] = {"MenuInventory","MenuPosition"};
+respawnButton = 1;
+respawnOnStart = 0;
+
 class CfgFunctions {
   #include "RifleTargets\cfgfunctions.hpp"
 

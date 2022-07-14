@@ -7,6 +7,7 @@ class header {
 };
 
 allowFunctionsRecompile = 0; //Turn this off when the script works before you use in in a multiplayer environment. Prevents hackers from recompiling the functions.
+
 //////////--Author and Loadscreen information--//////////        -----> https://community.bistudio.com/wiki/Loading_Screens
 author = "183rd Missions Team";
 OnLoadName = "183rd Air Assault Training";
@@ -15,19 +16,58 @@ loadScreen = "Background.paa";
 disabledAI = 1;
 enableTargetDebug = 1;
 
+class CfgFunctions {
+  #include "RifleTargets\cfgfunctions.hpp"
 
-#include "script_component.hpp"
-#include "CfgEventHandlers.hpp"
-#include "CfgFunctions.hpp"
-#include "CfgSimulator.hpp"
+	class PDT_MedicalSimulator {	
+		// all dialog functions
+		class dialogs {
+			  // adds items to listbox
+				class lbAdd            {file = "dialogs\functions\fn_lbAdd.sqf";};
+				// handles changing listbox selection
+				class lbSelChanged     {file = "dialogs\functions\fn_lbSelChanged.sqf";};
+				// updates the button states
+				class updateButtons    {file = "dialogs\functions\fn_updateButtons.sqf";};
+		};
+		// all the simulator functions
+		class medicalSimulator {
+            // spawns patient
+            class spawnPatient         {file = "functions\medical_simulator\fn_spawnPatient.sqf";};
+            // clears selected stretcher
+            class clearStretcher       {file = "functions\medical_simulator\fn_clearStretcher.sqf";};
+            // clears all stretchers
+            class clearAllStretchers   {file = "functions\medical_simulator\fn_clearAllStretchers.sqf";};
+            // create the view camera
+            class createCamera         {file = "functions\medical_simulator\fn_createCamera.sqf";};
+            // gets object from string
+            class getObject            {file = "functions\medical_simulator\fn_getObject.sqf";};
+            // damages patients
+            class damagePatient        {file = "functions\medical_simulator\fn_damagePatient.sqf";};
+		};
+	};
+};
+
+
+class PDT_CfgSimulator {
+  laptops[] = {PDT_MedicalSimulator_Laptop_01};
+
+  stretchers[] = {
+    {"Stretcher 01", PDT_MedicalSimulator_Stretcher_01},
+    {"Stretcher 02", PDT_MedicalSimulator_Stretcher_02},
+    {"Stretcher 03", PDT_MedicalSimulator_Stretcher_03},
+    {"Stretcher 04", PDT_MedicalSimulator_Stretcher_04},
+    {"Stretcher 05", PDT_MedicalSimulator_Stretcher_05},
+    {"Stretcher 06", PDT_MedicalSimulator_Stretcher_06},
+    {"Stretcher 07", PDT_MedicalSimulator_Stretcher_07},
+    {"Stretcher 08", PDT_MedicalSimulator_Stretcher_08},
+    {"Stretcher 09", PDT_MedicalSimulator_Stretcher_09}
+  };
+
+  cameraInfo[] = {
+    "PDT_MedicalSimulation_Camera_Position",
+    "PDT_MedicalSimulation_Camera_Target"
+  };
+};
+
 #include "dialogs\defines.hpp"
 #include "dialogs\patientSpawnMenu.hpp"
-
-class CfgDebriefingSections
-{
-    #include "\z\tfd\addons\adminmenu\debriefAdminLog.inc"
-    class acex_killTracker {
-        title = "ACEX Killed Events";
-        variable = "acex_killTracker_outputText";
-    };
-};

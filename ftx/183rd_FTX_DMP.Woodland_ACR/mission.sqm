@@ -12,22 +12,22 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=4738;
+		nextID=4740;
 	};
 	class MarkerIDProvider
 	{
-		nextID=1;
+		nextID=2;
 	};
 	class LayerIndexProvider
 	{
-		nextID=141;
+		nextID=152;
 	};
 	class Camera
 	{
-		pos[]={6981.2568,198.0135,5904.0098};
-		dir[]={-0.34919944,-0.48663804,-0.80078208};
-		up[]={-0.19451959,0.87360233,-0.44607124};
-		aside[]={-0.91664016,-4.4652552e-008,0.3997215};
+		pos[]={7114.5898,311.79257,5929.6445};
+		dir[]={-0.80740064,-0.40196118,-0.43191433};
+		up[]={-0.35443714,0.91565579,-0.18960419};
+		aside[]={-0.471699,-9.228097e-008,0.88177079};
 	};
 };
 binarizationWanted=0;
@@ -1180,7 +1180,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=125;
+		items=126;
 		class Item0
 		{
 			dataType="Marker";
@@ -41094,10 +41094,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3799.127,137.49606,4012.97};
+				position[]={4050.272,184.77289,3812.1169};
 			};
 			id=4611;
 			type="dmp_Core";
+			atlOffset=22.209991;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -48342,7 +48343,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0,2";
+							value="1,2";
 						};
 					};
 				};
@@ -48513,7 +48514,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="1,3";
+							value="3,6";
 						};
 					};
 				};
@@ -48570,7 +48571,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0,2";
+							value="1,2";
 						};
 					};
 				};
@@ -48836,7 +48837,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0,2";
+							value="1,2";
 						};
 					};
 				};
@@ -48855,7 +48856,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="2,4";
+							value="3,6";
 						};
 					};
 				};
@@ -48893,7 +48894,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0,2";
+							value="1,2";
 						};
 					};
 				};
@@ -51824,6 +51825,20 @@ class Mission
 			};
 			id=4736;
 			atlOffset=-0.00010681152;
+		};
+		class Item125
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={302.39401,312.58359,6755.147};
+			};
+			name="hc_1";
+			isPlayable=1;
+			description="hc_1";
+			id=4739;
+			type="HeadlessClient_F";
+			atlOffset=-3.0517578e-005;
 		};
 	};
 	class Connections

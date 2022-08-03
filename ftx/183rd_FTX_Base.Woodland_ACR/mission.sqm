@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=152;
+		nextID=163;
 	};
 	class Camera
 	{
 		pos[]={907.83301,325.99661,6862.1875};
-		dir[]={0.57156038,-0.59197038,0.56823778};
-		up[]={0.41980618,0.80595839,0.41736555};
-		aside[]={0.70504463,-3.3702236e-008,-0.70916724};
+		dir[]={-0.52295393,-0.33089632,0.78551418};
+		up[]={-0.18337449,0.94366676,0.27544183};
+		aside[]={0.83240688,-4.080357e-008,0.55417258};
 	};
 };
 binarizationWanted=0;
@@ -29961,12 +29961,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={835.82513,301.03522,6914.2271};
+				position[]={836.1911,301.05078,6911.0771};
 			};
 			areaSize[]={1,-1,1};
 			id=4553;
 			type="ModuleEditTerrainObject_F";
-			atlOffset=-3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0

@@ -1,6 +1,6 @@
 //////////--Game Mode--//////////        -----> http://community.bistudio.com/wiki/description.ext#Header_Class
 allowFunctionsRecompile = 0; //Turn this off when the script works before you use in in a multiplayer environment. Prevents hackers from recompiling the functions.
-
+nopop = true;
 //////////--Author and Loadscreen information--//////////        -----> https://community.bistudio.com/wiki/Loading_Screens
 class CfgFunctions {
   #include "RifleTargets\cfgfunctions.hpp"
@@ -56,3 +56,11 @@ class PDT_CfgSimulator {
 
 #include "dialogs\defines.hpp"
 #include "dialogs\patientSpawnMenu.hpp"
+
+class CfgDebriefingSections {
+    #include "\z\oeta\addons\adminmenu\debriefAdminLog.inc"
+    class acex_killTracker {
+        title = "ACEX Killed Events";
+        variable = "acex_killTracker_outputText";
+    };
+};

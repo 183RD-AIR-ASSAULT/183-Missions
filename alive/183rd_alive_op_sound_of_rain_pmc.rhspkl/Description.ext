@@ -1,0 +1,17 @@
+class CfgFunctions {
+    #include "furniture\func.hpp"
+};
+
+class Extended_PreInit_EventHandlers {
+    class tinter_furniture_pre_init {
+        init = "call compile preprocessFileLineNumbers 'furniture\XEH_preInit.sqf'";
+    };
+};
+
+class CfgDebriefingSections {
+    #include "\z\oetad\addons\adminmenu\debriefAdminLog.inc"
+    class acex_killTracker {
+        title = "ACEX Killed Events";
+        variable = "acex_killTracker_outputText";
+    };
+};
